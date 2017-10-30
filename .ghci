@@ -1,0 +1,5 @@
+:set -XOverloadedStrings
+:l GenerateErrors
+
+import Turtle
+import qualified Control.Foldl as Fold

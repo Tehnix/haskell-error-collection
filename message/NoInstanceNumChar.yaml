@@ -1,0 +1,5 @@
+explanation: PLACEHOLDER EXPLANATION
+resources: []
+message: ! "\nerrors/NoInstanceNumChar.hs:3:20: error:\n    • No instance for (Num
+  [Char]) arising from a use of ‘+’\n    • In the expression: 10 + \"string\"\n      In
+  an equation for ‘errorFunction’:\n          errorFunction xs = 10 + \"string\"\n"

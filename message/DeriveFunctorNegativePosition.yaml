@@ -1,0 +1,8 @@
+explanation: A Functor requires the arguments in positive position (e.g. `a -> b`), but your data type has its arguments in negative position (e.g. `b -> a`)
+resources:
+  - https://www.fpcomplete.com/blog/2016/11/covariance-contravariance#positive-and-negative-position
+message: |
+  errors/DeriveFunctorNegativePosition.hs:7:13: error:
+      • Can't make a derived instance of ‘Functor MakeInt’:
+          Constructor ‘MakeInt’ must not use the type variable in a function argument
+      • In the data declaration for ‘MakeInt’
