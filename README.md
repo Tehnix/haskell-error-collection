@@ -1,4 +1,5 @@
 # Helpful Haskell Errors (aka HHE)
+
 NOTE: Suuuuuper early stage.
 
 A collection of Haskell compiler errors along with an explanation of what went wrong. The motivation is to later build a tool that will parse the errors and then rewrite them to be both more explanatory and to point out possible fixes to the user.
@@ -6,6 +7,7 @@ A collection of Haskell compiler errors along with an explanation of what went w
 The reason for doing this as an external tool instead of improving error messages directly in GHC is that an external tool will be able to move much quicker, and will hopefully be a lot less complex than adding it to the GHC machinery directly (which would see very slow release to users).
 
 ## Structure
+
 Erroneous Haskell source files are located in `errors/src` and compiler error messages are kept in `errors/message`. The file names in `errors/src` all end in `.hs` and `errors/message` end in `.txt`, which the names before the filetype being identical.
 
 For example `errors/src/DeriveFunctorNegativePosition.hs` belongs together with `errors/message/DeriveFunctorNegativePosition.yaml`.
@@ -32,5 +34,4 @@ message: |
       • Can't make a derived instance of ‘Functor MakeInt’:
           Constructor ‘MakeInt’ must not use the type variable in a function argument
       • In the data declaration for ‘MakeInt’
-
 ```

@@ -68,7 +68,7 @@ generateMessages = do
   -- Build each of the Haskell source files.
   builds <- mapM buildFile hsFiles
   outputBuild builds
-  mapM_ ensureMessageExists builds
+  mapM_ ensureMessageExists $ builds
 
 -- | Run a shell command getting back the exit code, stdout and stderr.
 runSh :: Text -> [Text] -> IO (ExitCode, Text, Text)
